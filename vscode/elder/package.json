@@ -1,0 +1,30 @@
+{
+  "name": "elder",
+  "displayName": "Elder",
+  "description": "VSCode support for Elderlang",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elderlang/ide.plugin"
+  },
+  "publisher": "Eons LLC",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "elder",
+      "aliases": ["Elder", "elder"],
+      "extensions": [".ldr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "elder",
+      "scopeName": "source.elder",
+      "path": "./syntaxes/elder.tmLanguage.json"
+    }]
+  }
+}
