@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Elder",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#brackets"
+		},
+		{
+			"include": "#identifiers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.elder",
+					"match": "\\b(break|continue|case|default|else|for|if|not|return|switch|while|try|catch|as)\\b"
+				},
+				{
+					"name": "support.type.elder",
+					"match": "\\b(bool|float|int|string|functor|container|pointer)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.elder",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.elder",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.elder",
+					"match": "(#|//).*$"
+				},
+				{
+					"name": "comment.block.elder",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.elder",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.elder",
+					"match": ":=|/=|\\.|\\./|\\.+|~/|/"
+				},
+				{
+					"name": "keyword.operator.colon.elder",
+					"match": "::|:"
+				},
+				{
+					"name": "keyword.operator.at.elder",
+					"match": "@"
+				}
+			]
+		},
+		"brackets": {
+			"patterns": [
+				{
+					"name": "punctuation.section.block.elder",
+					"match": "[{}]"
+				},
+				{
+					"name": "punctuation.section.parameters.elder",
+					"match": "[()]"
+				},
+				{
+					"name": "punctuation.section.brackets.elder",
+					"match": "[\\[\\]]"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.other.elder",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.elderlang"
+}
