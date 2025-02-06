@@ -32,19 +32,49 @@
 					"match": "\\b(break|continue|case|default|else|for|if|not|return|switch|while|try|catch|as)\\b"
 				},
 				{
+					"name": "keyword.invocation.elder",
+					"match": "\\b(break|continue)\\b"
+				},
+				{
 					"name": "support.type.elder",
 					"match": "\\b(bool|float|int|string|functor|container|pointer)\\b"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.elder",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.elder",
-					"match": "\\\\."
+					"name": "string.quoted.single.elder",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.elder",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.elder",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.elder",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.grave.elder",
+					"begin": "`",
+					"end": "`",
+					"patterns": [
+						{
+							"name": "constant.character.escape.elder",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		},
